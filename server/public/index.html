@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ESP32 Weather Station</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">ESP32 MQTT WEATHER STATION</p>
+          <h1>Live DHT11 Sensor Dashboard</h1>
+          <p class="subtitle">
+            Secure Mosquitto broker, SQLite storage, REST API, and live browser monitoring.
+          </p>
+          <div class="tags">
+            <span>Topic: weather/+/telemetry</span>
+            <span>Broker: Debian Mosquitto</span>
+            <span>Database: SQLite</span>
+          </div>
+        </div>
+
+        <div class="status">
+          <span>System status</span>
+          <strong id="status">Waiting for data</strong>
+          <small id="lastSeen">Last update: n/a</small>
+        </div>
+      </section>
+
+      <section class="summary" id="summary"></section>
+
+      <div class="section-title">
+        <h2>Sensor Readings</h2>
+        <p>Moving averages from the latest ESP32 MQTT messages.</p>
+      </div>
+
+      <section class="grid" id="cards"></section>
+
+      <section class="links">
+        <a href="/api/readings/latest" target="_blank">Latest readings</a>
+        <a href="/api/clients/esp32-sumesh-01/data.json" target="_blank">Device history</a>
+        <a href="/api/clients/esp32-sumesh-01/status" target="_blank">Device status</a>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Latest API Data</h2>
+          <a href="/api/readings/latest" target="_blank">Open JSON</a>
+        </div>
+        <pre id="json">[]</pre>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
+

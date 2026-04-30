@@ -1,0 +1,14 @@
+{
+  "name": "final-weather-station-server",
+  "version": "1.0.0",
+  "description": "ESP32 DHT11 MQTT weather station web server with SQLite history and REST API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.9.1",
+    "express": "^4.21.2",
+    "mqtt": "^5.10.4"
+  }
+}
